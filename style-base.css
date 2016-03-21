@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//les marges et les padding ne sont pas ajoutés aux tailles définies pour les divs//
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Geneva, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#header {
+  background-color: blue;
+  height: 16vh;
+  line-height: 1.3;
+  position: relative;
+}
+
+.menu_details {
+  font-size: 1em;
+  padding: 2vw;
+  position: relative;
+}
+
+.menu_details:hover .menu_cache{
+  font-size: 1em;
+  height: auto;
+  list-style: none;
+  margin-top: -40px;
+  overflow: visible;
+  position: static;
+  width: 11.5vw;
+}
+
+.menu_details:hover .bordure {
+  stroke-dasharray: 760;
+  stroke-dashoffset: 0;
+  stroke-width: 2px;
+}
+
+.hover_details {
+  color: black;
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: -58px;
+}
+
+.bordure {
+  fill: transparent;
+  stroke: #19f6e8;
+  stroke-dasharray: 140 240;
+  stroke-dashoffset: 170;
+  stroke-width: 2px;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+#menu_visible {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 1vh;
+  margin-left: 2vw;
+}
+
+.menu_cache {
+  background: url("http://thumbs.dreamstime.com/t/texture-de-glace-de-piste-de-patinage-de-glace-53142158.jpg");
+  display: flex;
+  flex-flow: column wrap;
+  height: 1px;
+  line-height: 2;
+  overflow: hidden;
+  padding-left: 5px;
+  width: 1px;
+}
+
+.menu_compte {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 2vw;
+}
+
+.menu_compte li {
+  padding: 5px;
+}
+
+<-------------------------------//SLIDE//-------------------------------------->
+
+#slide {
+  height: 150px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.items {
+  /*list-style: none;*/
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 450px;
+
+  animation-name: autoSlide;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes autoSlide {
+  0%, 15%, 100% {
+    left: 0px;
+  }
+  35%, 50% {
+    left: -150px;
+  }
+  70%, 85% {
+    left: -300px;
+  }
+}
+
+.items li {
+  display: inline;
+}
+
+.img1 {
+  background-color: red;
+}
+
+.img2 {
+  background-color: blue;
+}
+
+.img3 {
+  background-color: yellow;
+}
